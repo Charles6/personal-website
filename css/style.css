@@ -1,0 +1,37 @@
+body{
+  background-color: black;
+  color:white;
+  text-align: center;
+  font-family: sans-serif;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+header h1{
+  color: darkred;
+  font-size: 44px;
+}
+
+header h4{
+  font-size: 25px;
+  margin-top: -30px;
+}
+
+#nav{
+  display: flex;
+  justify-content: space-around;
+  border-top: solid 1px darkred;
+  border-bottom: solid 1px darkred;
+  padding: 5px 0px 5px 0px;
+  flex-direction: row;
+}
+
+#nav a{
+  text-decoration: none;
+  color: white;
+  list-style: none;
+}
+
+#nav a:hover{
+  color: darkred;
+}
