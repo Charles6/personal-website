@@ -3,21 +3,30 @@ body{
   color:white;
   text-align: center;
   font-family: sans-serif;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-top: 133px;
 }
 
-header h1{
-  color: darkred;
-  font-size: 44px;
+#top{
+  left: 50%;
+  transform: translateX(-50%);
+  top:0px;
+  width: 75%;
+  position: fixed;
+  background-color: #050505;
 }
 
-header h4{
-  font-size: 25px;
-  margin-top: -30px;
+#back{
+  left: 50%;
+  transform: translateX(-50%);
+  top:0px;
+  width: 75%;
+  position: fixed;
+  background-color: #050505;
+  height: 100vh;
+  z-index: -1;
 }
 
-#nav{
+nav{
   display: flex;
   justify-content: space-around;
   border-top: solid 1px darkred;
@@ -26,12 +35,41 @@ header h4{
   flex-direction: row;
 }
 
-#nav a{
+nav a{
   text-decoration: none;
   color: white;
   list-style: none;
 }
 
-#nav a:hover{
+#active{
   color: darkred;
+}
+
+#nav a:hover{
+  color: red;
+  transition: 0.5s;
+}
+
+header h1{
+  margin-top: 10px;
+  color: darkred;
+  font-size: 44px;
+}
+
+header h4{
+  font-size: 25px;
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
+
+main{
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+#post{
+  width: 100%;
+  height: 200vh;
+  color: white;
 }

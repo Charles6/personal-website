@@ -1,0 +1,21 @@
+#contentContainer{
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#info{
+  text-align: left;
+  flex: 2;
+}
+
+#images{
+  flex: 1;
+}
+
+#images img{
+  width: 80%;
+}
