@@ -1,0 +1,27 @@
+main{
+  text-align: left;
+}
+
+h5{
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.experience:hover{
+  background-color: #1B2631;
+  transition: 1s;
+}
+.exTitle{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+}
+.title{
+  flex: 2;
+  text-align: left;
+}
+
+.date{
+  flex: 1;
+  text-align: right;
+}
