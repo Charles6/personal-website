@@ -1,5 +1,120 @@
+body{
+  background-color: black;
+  color:white;
+  text-align: center;
+  font-family: sans-serif;
+  margin: 0px;
+  font-size: 14px;
+  overflow-y: auto;
+}
+
+#top{
+  left: 50%;
+  transform: translateX(-50%);
+  top:0px;
+  width: 75%;
+  min-width: 68em;
+  position: fixed;
+  background-color: #050505;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: [header] 6em [nav] 3em [main] auto [footer] 3em;
+  grid-gap: 1em;
+  align-items: end;
+}
+
+#back{
+  left: 50%;
+  transform: translateX(-50%);
+  top:0px;
+  width: 75%;
+  min-width: 64em;
+  position: fixed;
+  background-color: #050505;
+  height: 100vh;
+  z-index: -1;
+}
+
+header {
+  grid-row: header;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.5em 0 1.5em 0 1.5em 0;
+  align-items: start;
+  grid-column-gap: 1em;
+
+}
+
+header h1{
+  font-size: 40px;
+  grid-column: 1;
+  margin: 0;
+  justify-self: end;
+  align-self: center;
+}
+
+header #lastname {
+  grid-row: 1 / span 2;
+}
+
+header #firstname {
+  grid-row: 5 / span 2;
+}
+
+header h4{
+  color: darkgrey;
+  grid-column: 2;
+  font-size: 24px;
+  margin: 0;
+  justify-self: start;
+  align-self: center;
+}
+
+header #one {
+  grid-row: 1;
+}
+
+header #two {
+  grid-row: 3;
+}
+
+header #three {
+  grid-row: 5;
+}
+
+nav{
+  border-top: solid 1px darkgrey;
+  border-bottom: solid 1px darkgrey;
+  grid-row: nav;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 3em;
+  align-items: center;
+}
+
+nav a{
+  text-decoration: none;
+  color: darkgrey;
+  list-style: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#active{
+  color: white;
+}
+
+nav a:hover{
+  color: grey;
+  transition: 0.5s;
+}
+
 main{
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
   text-align: left;
+  color: darkgrey;
 }
 
 h5{
@@ -28,4 +143,31 @@ li{
 .date{
   flex: 1;
   text-align: right;
+}
+
+footer {
+  border-top: solid 1px darkgrey;
+  border-bottom: solid 1px darkgrey;
+  grid-row: footer;
+  display: grid;
+  grid-template-columns: repeat(4, 2.5em);
+  grid-template-rows: 3em;
+  align-items: center;
+  justify-content: end;
+}
+
+footer a {
+  rel:noopener noreferrer;
+  target:_blank;
+}
+
+footer img {
+  height: 1.5em;
+  width: 1.5em;
+  filter:invert(100%);
+}
+
+footer img:hover {
+  filter: invert(60%);
+  transition: 0.5s;
 }

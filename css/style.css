@@ -3,8 +3,9 @@ body{
   color:white;
   text-align: center;
   font-family: sans-serif;
-  padding-top: 140px;
   margin: 0px;
+  font-size: 14px;
+  overflow-y: auto;
 }
 
 #top{
@@ -12,8 +13,14 @@ body{
   transform: translateX(-50%);
   top:0px;
   width: 75%;
+  min-width: 68em;
   position: fixed;
   background-color: #050505;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: [header] 6em [nav] 3em [main] auto [footer] 3em;
+  grid-gap: 1em;
+  align-items: end;
 }
 
 #back{
@@ -21,56 +28,178 @@ body{
   transform: translateX(-50%);
   top:0px;
   width: 75%;
+  min-width: 64em;
   position: fixed;
   background-color: #050505;
   height: 100vh;
   z-index: -1;
 }
 
+header {
+  grid-row: header;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.5em 0 1.5em 0 1.5em 0;
+  align-items: start;
+  grid-column-gap: 1em;
+
+}
+
+header h1{
+  font-size: 40px;
+  grid-column: 1;
+  margin: 0;
+  justify-self: end;
+  align-self: center;
+}
+
+header #lastname {
+  grid-row: 1 / span 2;
+}
+
+header #firstname {
+  grid-row: 5 / span 2;
+}
+
+header h4{
+  color: darkgrey;
+  grid-column: 2;
+  font-size: 24px;
+  margin: 0;
+  justify-self: start;
+  align-self: center;
+}
+
+header #one {
+  grid-row: 1;
+}
+
+header #two {
+  grid-row: 3;
+}
+
+header #three {
+  grid-row: 5;
+}
+
 nav{
-  display: flex;
-  justify-content: space-around;
-  border-top: solid 1px darkred;
-  border-bottom: solid 1px darkred;
-  padding: 5px 0px 5px 0px;
-  flex-direction: row;
+  border-top: solid 1px darkgrey;
+  border-bottom: solid 1px darkgrey;
+  grid-row: nav;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 3em;
+  align-items: center;
 }
 
 nav a{
   text-decoration: none;
-  color: white;
+  color: darkgrey;
   list-style: none;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 #active{
-  color: darkred;
+  color: white;
 }
 
 nav a:hover{
-  color: red;
+  color: grey;
   transition: 0.5s;
 }
 
-header h1{
-  margin-top: 10px;
-  color: darkred;
-  font-size: 44px;
-}
-
-header h4{
-  font-size: 25px;
-  margin-top: -30px;
-  margin-bottom: 20px;
-}
 
 main{
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
+  grid-row: main;
+  display: grid;
+  grid-template-columns: repeat(4, 16em);
+  grid-template-rows: repeat(3, 16em);
+  grid-gap: 1em;
+  justify-self: center;
 }
 
-#post{
+.block {
+  display: grid;
+}
+
+.block img {
+  opacity: 1;
   width: 100%;
-  height: 200vh;
-  color: white;
+}
+
+.small img:hover{
+  opacity: 0.5;
+
+}
+
+.block h5 {
+  opacity: 0;
+  position: relative;
+  justify-self:end;
+  margin-right: 10px;
+  top: -40px;
+  z-index: 4;
+}
+
+.small img:hover + h5 {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+#a {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#b {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#c {
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 2;
+}
+
+#d {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 2;
+}
+
+#e {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+#f {
+  grid-column: 4;
+  grid-row: 3;
+}
+
+footer {
+  border-top: solid 1px darkgrey;
+  border-bottom: solid 1px darkgrey;
+  grid-row: footer;
+  display: grid;
+  grid-template-columns: repeat(4, 2.5em);
+  grid-template-rows: 3em;
+  align-items: center;
+  justify-content: end;
+}
+
+footer a {
+  rel:noopener noreferrer;
+  target:_blank;
+}
+
+footer img {
+  height: 1.5em;
+  width: 1.5em;
+  filter:invert(100%);
+}
+
+footer img:hover {
+  filter: invert(60%);
+  transition: 0.5s;
 }
