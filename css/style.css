@@ -138,7 +138,7 @@ nav{
   border-bottom: solid 1px darkgrey;
   grid-row: nav;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 3em;
   align-items: center;
 }
@@ -170,7 +170,6 @@ nav a:hover{
   grid-gap: 1em;
   align-items: end;
 }
-
 
 main{
   grid-row: main;
