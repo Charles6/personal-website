@@ -1,0 +1,39 @@
+main{
+  grid-row: main;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 16em);
+  grid-gap: 1em;
+  justify-self: center;
+}
+
+form {
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  grid-template-columns: auto;
+  grid-row-gap: 10px;
+  grid-column-gap: 0px;
+  justify-self: center;
+}
+label{
+  width: 100%;
+  
+}
+
+input, textarea, button{
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+}
+
+input {
+
+}
+
+textarea {
+
+}
+
+button {
+
+}

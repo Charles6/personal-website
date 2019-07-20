@@ -108,10 +108,10 @@ header .title {
   grid-row: 1;
 }
 header .soc {
-  grid-row: 1;
+  grid-row: 3;
 }
 header .code {
-  grid-row: 3;
+  grid-row: 1;
 }
 header .teach {
   grid-row: 5;
@@ -120,12 +120,12 @@ header h4:hover + .title {
   opacity: 1;
   transition: 0.5s;
 }
-header .one:hover + .soc {
-  transform: translate(134px, -12px);
+header .one:hover + .code {
+  transform: translate(72px, -12px);
   transition: 0.5s;
 }
-header .two:hover + .code {
-  transform: translate(72px, -12px);
+header .two:hover + .soc {
+  transform: translate(134px, -12px);
   transition: 0.5s;
 }
 header .three:hover + .teach {
