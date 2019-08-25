@@ -8,18 +8,6 @@ main {
   justify-self: center;
 }
 
-/*main #synacor{
-  grid-row: 1;
-}
-
-main #gnomon{
-  grid-row: 2;
-}
-
-main #ucode{
-  grid-row: 3;
-}*/
-
 .experience {
   display: grid;
   width: 100%;
@@ -39,6 +27,7 @@ main #ucode{
 .experience .company {
   grid-column: 1;
   grid-row: 1;
+  padding-left: 5px;
 }
 
 .experience .company a {

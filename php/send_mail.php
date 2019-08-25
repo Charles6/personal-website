@@ -13,15 +13,15 @@ If you change the names of any of the pages, you will need to change the values 
 */
 $feedback_page = "/pages/contactpage.html";
 $error_page = "/pages/error_message.html";
-$thankyou_page = "/pagesthank_you.html";
+$thankyou_page = "/pages/thank_you.html";
 
 /*
 This next bit loads the form field data into variables.
 If you add a form field, you will need to add it here.
 */
-$email_address = $_REQUEST['email_address'] ;
+$email_address = $_REQUEST['email'] ;
 $comments = $_REQUEST['comments'] ;
-$first_name = $_REQUEST['first_name'] ;
+$first_name = $_REQUEST['name'] ;
 $msg = 
 "First Name: " . $first_name . "\r\n" . 
 "Email: " . $email_address . "\r\n" . 
@@ -51,12 +51,12 @@ function isInjected($str) {
 }
 
 // If the user tries to access this script directly, redirect them to the feedback form,
-if (!isset($_REQUEST['email_address'])) {
+if (!isset($_REQUEST['email'])) {
 header( "Location: $feedback_page" );
 }
 
 // If the form fields are empty, redirect to the error page.
-elseif (empty($first_name) || empty($email_address)) {
+elseif (empty($name) || empty($email)) {
 header( "Location: $error_page" );
 }
 
@@ -64,14 +64,14 @@ header( "Location: $error_page" );
 If email injection is detected, redirect to the error page.
 If you add a form field, you should add it here.
 */
-elseif ( isInjected($email_address) || isInjected($first_name)  || isInjected($comments) ) {
+elseif ( isInjected($email) || isInjected($name)  || isInjected($comments) ) {
 header( "Location: $error_page" );
 }
 
 // If we passed all previous tests, send the email then redirect to the thank you page.
 else {
 
-	mail( "$webmaster_email", "Feedback Form Results", $msg );
+	mail( "$email", "Feedback Form Results", $msg );
 
 	header( "Location: $thankyou_page" );
 }

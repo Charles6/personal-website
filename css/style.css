@@ -138,7 +138,7 @@ nav{
   border-bottom: solid 1px darkgrey;
   grid-row: nav;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 3em;
   align-items: center;
 }
@@ -171,75 +171,188 @@ nav a:hover{
   align-items: end;
 }
 
-main{
-  grid-row: main;
-  display: grid;
-  grid-template-columns: repeat(4, 16em);
-  grid-template-rows: repeat(3, 16em);
-  grid-gap: 1em;
-  justify-self: center;
-}
-main .block {
-  display: grid;
-}
-main .block img {
-  opacity: 1;
-  width: 100%;
-}
-main .small img:hover{
-  opacity: 0.5;
+
+
+  main{
+    grid-row: main;
+    display: grid;
+    grid-template-columns: repeat(2, 28em);
+    grid-template-rows: repeat(8, 28em);
+    grid-gap: 1em;
+    justify-self: center;
+  }
+  main .block {
+    display: grid;
+  }
+  main .block img {
+    opacity: 1;
+    width: 100%;
+  }
+  main .small img:hover{
+    opacity: 0.5;
+  }
+  main .block h5 {
+    opacity: 0;
+    position: relative;
+    justify-self:end;
+    margin-right: 10px;
+    top: -40px;
+    z-index: 4;
+  }
+  main .small img:hover + h5 {
+    opacity: 1;
+    transition: 0.5s;
+  }
+  main #a {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  main #b {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  main #c {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  main #d {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  main #e {
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 2;
+  }
+
+  main #f {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    border: solid 1px darkred;
+  }
+  main #f h2 {
+    grid-column: 3 / span 2;
+    grid-row: 1;
+    align-self: end;
+    margin-bottom: 0;
+  }
+  main #f p {
+    grid-column: 3 / span 2;
+    grid-row: 2;
+    padding: 0 20px;
+  }
+
+  main #g {
+    grid-column: 1;
+    grid-row: 6;
+  }
+  main #h {
+    grid-column: 2;
+    grid-row: 6;
+  }
+  main #i {
+    grid-column: 1;
+    grid-row: 7;
+  }
+  main #j {
+    grid-column: 2;
+    grid-row: 7;
+  }
+  main #k {
+    grid-column: 1;
+    grid-row: 8;
+  }
+  main #l {
+    grid-column: 2;
+    grid-row: 8;
+  }
+
+
+/*For Desktop*/
+@media only screen and (min-device-width: 900px) {
+
+  main{
+    grid-template-columns: repeat(4, 16em);
+    grid-template-rows: repeat(4, 16em);
+  }
+  main #a {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  main #b {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  main #c {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  main #d {
+    grid-column: 4;
+    grid-row: 1;
+  }
+  main #e {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+  }
+
+  main #f {
+    grid-column: 3 / span 2;
+    grid-row: 2;
+  }
+  main #f h2 {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 1;
+  }
+  main #f p {
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 1;
+  }
+  main #g {
+    grid-column: 3;
+    grid-row: 3;
+  }
+  main #h {
+    grid-column: 4;
+    grid-row: 3;
+  }
+  main #i {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  main #j {
+    grid-column: 2;
+    grid-row: 4;
+  }
+  main #k {
+    grid-column: 3;
+    grid-row: 4;
+  }
+  main #l {
+    grid-column: 4;
+    grid-row: 4;
+  }
 
 }
-main .block h5 {
-  opacity: 0;
-  position: relative;
-  justify-self:end;
-  margin-right: 10px;
-  top: -40px;
-  z-index: 4;
-}
-main .small img:hover + h5 {
-  opacity: 1;
-  transition: 0.5s;
-}
-main #a {
-  grid-column: 1;
-  grid-row: 1;
-}
-main #b {
-  grid-column: 2;
-  grid-row: 1;
-}
-main #c {
-  grid-column: 3 / span 2;
-  grid-row: 1 / span 2;
-}
-main #d {
-  grid-column: 1 / span 2;
-  grid-row: 2 / span 2;
-}
-main #e {
-  grid-column: 3;
-  grid-row: 3;
-}
-main #f {
-  grid-column: 4;
-  grid-row: 3;
-}
+
 
 footer {
   border-top: solid 1px darkgrey;
   border-bottom: solid 1px darkgrey;
   grid-row: footer;
   display: grid;
-  grid-template-columns: repeat(4, 2.5em);
+  grid-template-columns: repeat(5, 2.5em);
   grid-template-rows: 3em;
   align-items: center;
   justify-content: end;
 }
-footer a {
-  rel:noopener noreferrer;
-  target:_blank;
+footer a{
+  justify-self: flex-end;
+  text-decoration: none;
+  color: white;
+}
+footer a:hover {
+  transition: 0.5s;
+  color: grey;
 }
 footer img {
   height: 1.5em;
