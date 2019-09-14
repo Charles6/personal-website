@@ -1,173 +1,73 @@
-body{
-  background-color: black;
-  color:white;
-  text-align: center;
-  font-family: sans-serif;
-  margin: 0px;
-  font-size: 14px;
-  overflow-y: auto;
+main {
+  grid-row: main;
+  display: grid;
+  grid-template-rows: repeat(8, min-content);
+  grid-template-columns: auto;
+  grid-row-gap: 10px;
+  grid-column-gap: 0px;
+  justify-self: center;
 }
 
-#top{
-  left: 50%;
-  transform: translateX(-50%);
-  top:0px;
-  width: 75%;
+.experience {
+  display: grid;
+  width: 100%;
   min-width: 68em;
-  position: fixed;
-  background-color: #050505;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: [header] 6em [nav] 3em [main] auto [footer] 3em;
-  grid-gap: 1em;
-  align-items: end;
+  grid-template-columns: minmax(10em, min-content) auto auto;
+  grid-template-rows: 3em 2em min-content;
+  grid-gap: 0;
+  color: darkgrey;
+  white-space: nowrap;
 }
 
-#back{
-  left: 50%;
-  transform: translateX(-50%);
-  top:0px;
-  width: 75%;
-  min-width: 64em;
-  position: fixed;
-  background-color: #050505;
-  height: 100vh;
-  z-index: -1;
+.experience:hover {
+  background-color: rgba(50, 50, 50, 0.8);
+  transition: 0.5s;
 }
 
-header {
-  grid-row: header;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1.5em 0 1.5em 0 1.5em 0;
-  align-items: start;
-  grid-column-gap: 1em;
-
-}
-
-header h1{
-  font-size: 40px;
+.experience .company {
   grid-column: 1;
-  margin: 0;
-  justify-self: end;
-  align-self: center;
-}
-
-header #lastname {
-  grid-row: 1 / span 2;
-}
-
-header #firstname {
-  grid-row: 5 / span 2;
-}
-
-header h4{
-  color: darkgrey;
-  grid-column: 2;
-  font-size: 24px;
-  margin: 0;
-  justify-self: start;
-  align-self: center;
-}
-
-header #one {
   grid-row: 1;
+  padding-left: 5px;
 }
 
-header #two {
-  grid-row: 3;
-}
-
-header #three {
-  grid-row: 5;
-}
-
-nav{
-  border-top: solid 1px darkgrey;
-  border-bottom: solid 1px darkgrey;
-  grid-row: nav;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 3em;
-  align-items: center;
-}
-
-nav a{
-  text-decoration: none;
-  color: darkgrey;
-  list-style: none;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-#active{
+.experience .company a {
   color: white;
+  text-decoration: none;
 }
 
-nav a:hover{
-  color: grey;
+.experience .company a:hover {
+  color: darkred;
   transition: 0.5s;
 }
 
-main{
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
-  text-align: left;
-  color: darkgrey;
+.experience .location {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: start;
+  padding-left: 4px;
+  line-height: 2.6;
+  font-style: italic;
 }
 
-h5{
-  margin-bottom: 0px;
-  margin-top: 0px;
+.experience .title {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  justify-self: start;
+  padding-left: 20px;
+
 }
 
-li{
-  font-size: 16px;
+.experience .dates {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  padding-right: 10px;
 }
 
-.experience:hover{
-  background-color: #1B2631;
-  transition: 1s;
-}
-.exTitle{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap:wrap;
-}
-.title{
-  flex: 2;
-  text-align: left;
-}
-
-.date{
-  flex: 1;
-  text-align: right;
-}
-
-footer {
-  border-top: solid 1px darkgrey;
-  border-bottom: solid 1px darkgrey;
-  grid-row: footer;
-  display: grid;
-  grid-template-columns: repeat(4, 2.5em);
-  grid-template-rows: 3em;
-  align-items: center;
-  justify-content: end;
-}
-
-footer a {
-  rel:noopener noreferrer;
-  target:_blank;
-}
-
-footer img {
-  height: 1.5em;
-  width: 1.5em;
-  filter:invert(100%);
-}
-
-footer img:hover {
-  filter: invert(60%);
-  transition: 0.5s;
+.experience .duties {
+  grid-column: 1 / span 3;
+  grid-row: 3;
+  justify-self: start;
+  text-align:left;
+  list-style: none;
 }
