@@ -40,7 +40,14 @@ main {
     grid-column:1;
     text-align: end;
 }
+
 .rating{
+    background-color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.rating:hover {
+    transition: 0.5s;
     background-color: darkred;
 }
 
@@ -48,138 +55,58 @@ main {
     grid-row: 1;
 }
 
-#jsName{
-    grid-row:2;
-}
 #js{
-    grid-row:2;
     grid-column: 2 / span 5;
 }
-
-#hcName{
-    grid-row:3;
+#ts {
+    grid-column: 2/ span 4;
 }
+
 #hc{
-    grid-row:3;
     grid-column: 2 / span 5;
-}
-
-#reactName{
-    grid-row:4;
 }
 #react{
-    grid-row:4;
-    grid-column: 2 / span 4;
+    grid-column: 2 / span 5;
 }
-
-#phpName{
-    grid-row:5;
+#gatsby{
+    grid-column: 2 / span 4;
 }
 #php{
-    grid-row:5;
     grid-column: 2 / span 4;
-}
-
-#goName{
-    grid-row:6;
 }
 #go{
-    grid-row:6;
     grid-column: 2 / span 2;
 }
-
-#nodeName{
-    grid-row:7;
-}
 #node{
-    grid-row:7;
     grid-column: 2 / span 3;
-}
-
-#pythonName{
-    grid-row:8;
 }
 #python{
-    grid-row:8;
     grid-column: 2 / span 4;
-}
-
-#languages{
-    grid-row: 9;
-}
-
-#englishName{
-    grid-row:10;
 }
 #english{
-    grid-row:10;
     grid-column: 2 / span 5;
-}
-
-#vietnameseName{
-    grid-row:11;
 }
 #vietnamese{
-    grid-row:11;
     grid-column: 2 / span 5;
-}
-
-#japaneseName{
-    grid-row:12;
 }
 #japanese{
-    grid-row:12;
     grid-column: 2 / span 4;
-}
-
-#general{
-    grid-row: 13;
-}
-
-#feName{
-    grid-row:14;
 }
 #fe{
-    grid-row:14;
     grid-column: 2 / span 5;
-}
-
-#beName{
-    grid-row:15;
 }
 #be{
-    grid-row:15;
     grid-column: 2 / span 3;
 }
-
-#statName{
-    grid-row:16;
-}
 #stat{
-    grid-row:16;
     grid-column: 2 / span 4;
-}
-
-#teachName{
-    grid-row:17;
 }
 #teach{
-    grid-row:17;
     grid-column: 2 / span 5;
 }
-
-#leadName{
-    grid-row:18;
-}
 #lead{
-    grid-row:18;
     grid-column: 2 / span 4;
 }
-
-#solveName{
-    grid-row:19;
-}
 #solve{
-    grid-row:19;
     grid-column: 2 / span 5;
 }
