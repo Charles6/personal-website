@@ -13,7 +13,6 @@ body{
   top:0px;
   width: 75%;
   position: fixed;
-  background-color: #050505;
   height: 100vh;
   z-index: -10;
 }
@@ -24,7 +23,7 @@ body{
   top:0px;
   width: 75%;
   min-width: 68em;
-  background-color: #050505;
+  background-color: black;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: [header] 6em [nav] 3em;
@@ -163,7 +162,6 @@ nav a:hover{
   margin-left: auto;
   width: 75%;
   min-width: 68em;
-  background-color: #050505;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: [main] auto [footer] 3em;
