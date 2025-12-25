@@ -3,14 +3,14 @@ export const data = {
   basics: {
     name: "Nguyen Charles",
     furiganaName: "グェン　チャールズ",
-    label: ["Social Scientist","Software Engineer", "Tinkerer"],
+    label: ["Social Scientist", "Software Engineer", "Tech Enthusiast"],
     image: "assets/avatar.jpg",
-    email: "contact@charlesnguyen.com",
+    email: "chr@actu-al.co",
     phone: "",
     url: "https://charlesnguyen.com",
-    summary: "Software Engineer with a passion for building scalable, user-centric applications. Experienced in modern web technologies and always eager to learn new skills.",
+    summary: "Software Engineer living in Kyoto with a passion for building scalable, user-centric applications. Experienced in modern web technologies and always eager to learn new skills.",
     location: {
-      city: "Tokyo",
+      city: "Kyoto",
       country: "Japan",
     },
     profiles: [
@@ -117,7 +117,7 @@ export const data = {
     },
     {
       company: "DevLeague",
-      location: "Honolulu, Hawaii, USA",
+      location: "Honolulu, Hawaiʻi, USA",
       position: "Lead Coding Instructor",
       startDate: "2014",
       endDate: "2016",
@@ -131,11 +131,20 @@ export const data = {
   ],
   education: [
     {
-      institution: "University Name",
-      area: "Computer Science",
-      studyType: "Bachelor",
-      startDate: "2016-01",
-      endDate: "2020-01",
+      institution: "University of Hawaiʻi at Mānoa",
+      location: "Honolulu, Hawaiʻi, USA",
+      area: "Sociology",
+      studyType: "Masters of Arts",
+      startDate: "2009",
+      endDate: "2011",
+    },
+    {
+      institution: "College of William & Mary",
+      location: "Williamsburg, Virginia, USA",
+      area: "Psychology",
+      studyType: "Bachelors of Science",
+      startDate: "2000",
+      endDate: "2004",
     },
   ],
   skills: [
@@ -155,18 +164,4 @@ export const data = {
       keywords: ["Docker", "AWS", "CI/CD", "Git"],
     },
   ],
-  projects: [
-    {
-      name: "Personal Portfolio",
-      description: "A cyberpunk-themed personal website built with Astro and React.",
-      url: "#",
-      tags: ["Astro", "React", "TypeScript", "Tailwind"],
-    },
-    {
-      name: "Project Beta",
-      description: "A cool project demonstrating core skills.",
-      url: "#",
-      tags: ["Node.js", "Socket.io"],
-    },
-  ]
 };

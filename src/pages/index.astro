@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { Hero } from "../components/Hero";
 import { Skills } from "../components/Skills";
 import { Experience } from "../components/Experience";
+import { Education } from "../components/Education";
 import { Contact } from "../components/Contact";
 import { data } from "../data/profile";
 ---
@@ -11,5 +12,6 @@ import { data } from "../data/profile";
 	<Hero client:load />
 	<Skills client:visible />
 	<Experience client:visible />
+	<Education client:visible />
 	<Contact client:visible />
 </Layout>

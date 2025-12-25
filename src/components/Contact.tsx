@@ -27,7 +27,7 @@ export const Contact = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          Whether you have a question or just want to say hi, I'll try my best to get back to you!
+          I respond best through my social media, and would love to get to know you.
         </motion.p>
 
         <motion.div
@@ -37,14 +37,6 @@ export const Contact = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
-{/*          <a
-            href={`mailto:${data.basics.email}`}
-            className="flex items-center gap-2 px-8 py-4 bg-white/5 border border-white/10 rounded-full hover:bg-magenta hover:text-white hover:border-magenta transition-all duration-300 group"
-          >
-            <Mail className="w-5 h-5" />
-            <span>Say Hello</span>
-          </a>*/}
-
           {data.basics.profiles.map((profile, idx) => (
             <a
               key={idx}
