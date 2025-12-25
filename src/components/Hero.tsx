@@ -28,7 +28,7 @@ export const Hero = () => {
           <p className="text-3xl md:text-4xl font-heading font-bold mb-6 text-magenta tracking-tighter mix-blend-overlay">
             {basics.furiganaName}
           </p>
-          <h3 className="text-2xl md:text-4xl text-gray-400 font-light mb-8 max-w-2xl mx-auto md:mx-0">
+          <h3 className="text-2xl md:text-4xl text-gray-400 font-light mb-8 max-w-2xl text-left md:mx-0">
             {`[`}
             {basics.label.map((label, index) => (
               <>

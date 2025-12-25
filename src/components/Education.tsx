@@ -35,7 +35,7 @@ export const Education = () => {
                   <span className="text-xs font-mono text-magenta block">{edu.startDate} — {edu.endDate}</span>
                 </div>
 
-                <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-magenta transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-magenta transition-colors mt-8 md:mt-0">
                   {edu.studyType} in {edu.area}
                 </h3>
                 <h4 className="text-xl text-gray-400 mb-4">{edu.institution}</h4>

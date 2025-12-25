@@ -35,7 +35,7 @@ export const Experience = () => {
                   <span className="text-xs font-mono text-yellow block">{job.startDate} — {job.endDate}</span>
                 </div>
 
-                <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-yellow transition-colors">{job.position}</h3>
+                <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-yellow transition-colors mt-8 md:mt-0">{job.position}</h3>
                 <a
                   href={job.companyWebsite}
                   target="_blank"
