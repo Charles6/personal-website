@@ -1,22 +1,31 @@
+---
+import "../styles/global.css";
+
+import { InteractiveBackground } from "../components/InteractiveBackground";
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Charles Nguyen - Software Engineer" } =
+	Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
 	</head>
-	<body>
-		<slot />
+	<body class="bg-grid">
+		<InteractiveBackground client:only="react" />
+		<main class="relative z-10">
+			<slot />
+		</main>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
